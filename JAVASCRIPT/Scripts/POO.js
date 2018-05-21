@@ -16,13 +16,29 @@ class Contacto {
 
 		this.telefono = nuevoT;
 	}
+	CambiarNombre(NuevoN){
+		this.nombre = NuevoN;
+	}
 }
-
+var c1;
 
 function CrearContacto() {
 	
-	var c1 = new Contacto("Pepe", 1111);
-	var c2 = new Contacto("Ana", 3333);
+	c1 = new Contacto("Pepe", 1111);
 
 	c1.Escribir();
+}
+
+function ModificarContacto() {
+	var valorNombre,
+		valorTelefono;
+
+		valorNombre = document.getElementById('nombre').value;
+		valorTelefono = document.getElementById('telefono').value;
+		c1.CambiarNombre(valorNombre);
+		c1.CambiarTelefono(valorTelefono);
+		c1.Escribir();
+
+
+
 }
